@@ -45,12 +45,13 @@ else:
             service_password))
     else:
         runsql(
-            "grant all on `%s`.* to `%s` identified by '%s'" % (
+            "grant all on `%s`.* to `%s`@`%s` identified by '%s'" % (
             database_name,
             user,
+	    rhost,
             service_password))
         runsql(
-            "GRANT FILE ON *.* to `%s`@`%s` idenfied by '%s'" % (
+            "GRANT FILE ON *.* to `%s`@`%s` identified by '%s'" % (
              user,
              rhost,
              service_password))

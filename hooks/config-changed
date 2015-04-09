@@ -325,11 +325,13 @@ collation-server = utf8_general_ci
 init-connect='SET NAMES utf8'
 character-set-server = utf8
 
+max_allowed_packet	= 16M
+group_concat_max_len = 8192
+
+
 [mysqldump]
 quick
 quote-names
-max_allowed_packet	= 16M
-group_concat_max_len = 8192
 
 [mysql]
 #no-auto-rehash	# faster start of mysql but no tab completion

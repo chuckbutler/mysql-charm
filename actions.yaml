@@ -1,0 +1,2 @@
+disableapparmor:
+    description: Disable MySQL App Armor Profile
